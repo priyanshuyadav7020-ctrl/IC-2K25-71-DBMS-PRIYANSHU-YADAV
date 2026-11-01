@@ -49,3 +49,124 @@ CREATE TABLE job_histry (
    job_id varchar(10),
    department_id decimal(4,0)
 );
+
+Q9)
+CREATE TABLE countries (
+   country_id varchar(2) UNIQUE,
+   country_name varchar(40),
+   region_id decimal(10,0)
+);
+
+Q10)
+CREATE TABLE jobs (
+   job_id varchar(10),
+   job_title varchar(35) DEFAULT '',
+   min_salary decimal(6,0) DEFAULT 8000,
+   max_salary decimal(6,0) DEFAULT NULL
+);
+
+Q11)
+CREATE TABLE countries (
+   country_id varchar(2) PRIMARY KEY,
+   country_name varchar(40),
+   region_id decimal(10,0)
+);
+
+Q12)
+CREATE TABLE countries (
+   country_id int NOT NULL UNIQUE AUTO_INCREMENT,
+   country_name varchar(40),
+   region_id decimal(10,0)
+);
+
+Q13)
+CREATE TABLE countries (
+   country_id varchar(2),
+   country_name varchar(40),
+   region_id decimal(10,0),
+   UNIQUE(country_id, region_id)
+);
+
+Q14)
+CREATE TABLE job_history (
+   employee_id decimal(6,0) UNIQUE,
+   start_date date,
+   end_date date,
+   job_id varchar(10),
+   department_id decimal(4,0),
+   FOREIGN KEY (job_id) REFERENCES jobs(job_id)
+);
+
+Q15)
+CREATE TABLE employees (
+   employee_id decimal(6,0) UNIQUE,
+   first_name varchar(20),
+   last_name varchar(25),
+   email varchar(25),
+   phone_number varchar(20),
+   hire_date date,
+   job_id varchar(10),
+   salary decimal(8,2),
+   commission decimal(2,2),
+   manager_id decimal(6,0),
+   department_id decimal(4,0),
+   FOREIGN KEY (department_id, manager_id) REFERENCES departments(department_id, manager_id)
+);
+
+Q16)
+CREATE TABLE employees (
+   employee_id decimal(6,0) UNIQUE,
+   first_name varchar(20),
+   last_name varchar(25),
+   email varchar(25),
+   phone_number varchar(20),
+   hire_date date,
+   job_id varchar(10),
+   salary decimal(8,2),
+   commission decimal(2,2),
+   manager_id decimal(6,0),
+   department_id decimal(4,0),
+   FOREIGN KEY (department_id) REFERENCES departments(department_id),
+   FOREIGN KEY (job_id) REFERENCES jobs(job_id)
+);
+
+Q17)
+CREATE TABLE employees (
+   employee_id decimal(6,0) UNIQUE,
+   first_name varchar(20),
+   last_name varchar(25),
+   job_id int(11),
+   salary decimal(8,2),
+   FOREIGN KEY (job_id) REFERENCES jobs(JOB_ID) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+Q18)
+CREATE TABLE employees (
+   employee_id decimal(6,0) UNIQUE,
+   first_name varchar(20),
+   last_name varchar(25),
+   job_id int(11),
+   salary decimal(8,2),
+   FOREIGN KEY (job_id) REFERENCES jobs(JOB_ID) ON DELETE CASCADE ON UPDATE RESTRICT
+);
+
+Q19)
+CREATE TABLE employees (
+   employee_id decimal(6,0) UNIQUE,
+   first_name varchar(20),
+   last_name varchar(25),
+   job_id int(11),
+   salary decimal(8,2),
+   FOREIGN KEY (job_id) REFERENCES jobs(JOB_ID) ON DELETE SET NULL ON UPDATE SET NULL
+);
+
+Q20)
+CREATE TABLE employees (
+   employee_id decimal(6,0) UNIQUE,
+   first_name varchar(20),
+   last_name varchar(25),
+   job_id int(11),
+   salary decimal(8,2),
+   FOREIGN KEY (job_id) REFERENCES jobs(JOB_ID) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
