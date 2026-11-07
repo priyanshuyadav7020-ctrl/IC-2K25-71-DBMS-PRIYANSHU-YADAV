@@ -1,0 +1,19 @@
+Q1)
+SELECT first_name AS "First Name", last_name AS "Last Name"
+FROM employees;
+
+Q2)
+SELECT DISTINCT department_id
+FROM employees;
+
+Q3)
+SELECT * FROM employees ORDER BY first_name DESC;
+
+Q4)
+SELECT first_name, last_name, salary, salary * 0.15 AS PF
+FROM employees;
+
+Q5)
+SELECT employee_id, first_name, last_name, salary
+FROM employees
+ORDER BY salary ASC;
