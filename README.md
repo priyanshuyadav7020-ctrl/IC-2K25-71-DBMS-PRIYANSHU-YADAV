@@ -6,9 +6,13 @@ Integrated MCA – 3rd Semester
 Student Information
 
 Name: Priyanshu Yadav
+
 Course: Integrated Master of Computer Applications (MCA)
+
 Semester: 3rd Semester
+
 Section: B
+
 About This Repository
 
 This repository contains my Database Management System (DBMS) Lab Assignment work completed as part of my 3rd Semester Integrated MCA curriculum.
@@ -26,20 +30,36 @@ Understand constraints and relationships between tables.
 Maintain practical assignments and their outputs on GitHub.
 Topics Covered
 
+
 SQL Basics
+
 DDL (Data Definition Language)
+
 DML (Data Manipulation Language)
+
 DQL (Data Query Language)
+
 DCL (Data Control Language)
+
 TCL (Transaction Control Language)
+
 Constraints
+
 Aggregate Functions
+
 GROUP BY and HAVING
+
 ORDER BY
+
 Joins
+
 Subqueries
+
 Database and Table Creation
+
 Data Insertion, Updating, and Deletion
+
+
 Tools Used
 
 MySQL
