@@ -1,4 +1,4 @@
-Roll-no.-IC-2K25-94-DBMS-Vaishnaviyadav
+Roll-no.-IC-2K25-71-DBMS-Priyanshu yadav
 DBMS LAB ASSIGNMENT
 
 Integrated MCA – 3rd Semester
